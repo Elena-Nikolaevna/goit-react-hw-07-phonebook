@@ -1,0 +1,33 @@
+.formWrap {
+    text-align: center;
+  }
+  .inputWrap {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    margin: 25px auto;
+  }
+  .label {
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .input {
+    font-size: 17px;
+  }
+  
+  .button {
+    background-color: #d6c162;
+    padding: 10px 20px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;    
+    margin: 0 auto;
+  }
+  
+  .button:hover,
+  .button:focus {
+    background-color: #f1e758;
+  }
