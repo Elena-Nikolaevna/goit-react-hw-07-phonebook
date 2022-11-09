@@ -1,0 +1,30 @@
+.contactsItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+     
+  }
+  .contactsItem:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .contactText {
+    font-weight: 700;
+  }
+  
+  .button {
+    background-color: #d6c162;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;    
+    margin: 0 auto;
+  }
+  
+  .button:hover,
+  .button:focus {
+    background-color: #f1e758;
+  }
