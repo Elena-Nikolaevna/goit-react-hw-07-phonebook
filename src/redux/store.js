@@ -10,7 +10,8 @@ import {
 //import { persistReducer } from 'redux-persist';
 //import storage from 'redux-persist/lib/storage';
 //import { contactsSlice } from 'redux/contactsSlice';
-import { contactsReducer } from './phonebook/reducers';
+import  contactsReducer  from './phonebook/reducers';
+import logger from 'redux-logger';
 
 /* const persistConfig = {
   key: 'contacts',
@@ -23,16 +24,15 @@ import { contactsReducer } from './phonebook/reducers';
   contactsSlice.reducer
 ); */
 
-export const store = configureStore({
-  reducer: {
-    contacts: contactsReducer,
-  },
+const store = configureStore({
+  reducer: { phonebook: contactsReducer },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }),
+    }).concat(logger),
+  devTools: process.env.NODE_ENV === 'development',
 });
 
-export const persistor = persistStore(store);
+export default store;
