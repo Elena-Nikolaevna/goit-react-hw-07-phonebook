@@ -1,8 +1,8 @@
 import s from './App.module.css';
 //import React, { Component } from 'react';
 import {ContactForm} from './ContactForm/ContactForm';
-import {Filter} from './Filter/Filter';
-import {ContactList} from './ContactList/ContactList';
+import Filter from './Filter/Filter';
+import {ContactItem} from './ContactItem/ContactItem';
 //import ContactItem from './ContactItem/ContactItem';
 //import {useState,useEffect} from "react";
 //import { nanoid } from 'nanoid';
@@ -15,7 +15,7 @@ export function App () {
         <ContactForm />
         <h2 className={s.title}>Contacts</h2>
         <Filter />
-        <ContactList />         
+        <ContactItem />         
       </div>
     </>
   );
